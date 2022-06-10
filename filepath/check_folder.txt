@@ -1,0 +1,36 @@
+from curses import pair_content
+import os
+import smtplib
+from os import environ
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import platform
+import subprocess
+
+directory_name = r"\\network\foldername"
+
+
+def send_email():
+    # Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = 'sender_address'
+    message['To'] = 'receiver_address'
+
+    # The subject line
+    message['Subject'] = 'A test mail sent by Python. It has an attachment.'
+    # The body and the attachments for the mail
+    message.attach(MIMEText(pair_content, 'plain'))
+    # Create SMTP session for sending the mail
+    session = smtplib.SMTP('smtp.gmail.com', 587)  # use gmail with port
+    session.starttls()  # enable security
+    # login with mail_id and password
+    session.login('sender_address', 'sender_pass')
+    text = message.as_string()
+    session.sendmail('sender_address', 'receiver_address', text)
+    session.quit()
+
+
+if not os.path.isdir(directory_name):
+    send_email()
+else:
+    print("Network folder is accessible")

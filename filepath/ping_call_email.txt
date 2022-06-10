@@ -1,0 +1,78 @@
+import smtplib
+from os import environ
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import platform
+import subprocess
+
+###
+###
+mail_content = '''Hello,
+            This is a simple mail. There is only text, no attachments are there The mail is sent using Python SMTP library.
+            Thank You'''
+
+# The mail addresses and password
+sender_address = 'btcpgh4@gmail.com'
+sender_pass = '*******'
+receiver_address = 'girishknit@gmail.com'
+
+
+def ping(host, network_timeout=3):
+    """Send a ping packet to the specified host, using the system "ping" command."""
+    args = [
+        'ping'
+    ]
+
+    platform_os = platform.system().lower()
+
+    if platform_os == 'windows':
+        args.extend(['-n', '1'])
+        args.extend(['-w', str(network_timeout * 1000)])
+    elif platform_os in ('linux', 'darwin'):
+        args.extend(['-c', '1'])
+        args.extend(['-W', str(network_timeout)])
+    else:
+        raise NotImplemented('Unsupported OS: {}'.format(platform_os))
+
+    args.append(host)
+
+    try:
+        if platform_os == 'windows':
+            output = subprocess.run(
+                args, check=True, universal_newlines=True).stdout
+
+            if output and 'TTL' not in output:
+                return False
+        else:
+            subprocess.run(args, check=True)
+
+        return True
+    except(subprocess.CalledProcessError, subprocess.TimeoutExpired):
+        return False
+
+
+def send_email():
+    # Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = receiver_address
+
+    # The subject line
+    message['Subject'] = 'A test mail sent by Python. It has an attachment.'
+    # The body and the attachments for the mail
+    message.attach(MIMEText(mail_content, 'plain'))
+    # Create SMTP session for sending the mail
+    session = smtplib.SMTP('smtp.gmail.com', 587)  # use gmail with port
+    session.starttls()  # enable security
+    # login with mail_id and password
+    session.login(sender_address, sender_pass)
+    text = message.as_string()
+    session.sendmail(sender_address, receiver_address, text)
+    session.quit()
+
+
+if not ping("google.com"):
+    print("Server Down !!")
+    send_email()
+else:
+    print("Server is working !!")
