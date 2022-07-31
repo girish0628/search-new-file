@@ -1,0 +1,150 @@
+TEST
+In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.In data source connections between a client and server there are two general types: ODBC which uses a DRIVER and OLEDB which uses a PROVIDER. And in the programming world, it is a regular debate as to which route to go in connecting to data sources.
+
+You are using a provider, SQLOLEDB, but specifying it as a driver. As far as I know, neither the pyodbc nor pypyodbc modules support Window OLEDB connections. However, the adodbapi does which uses the Microsoft ADO as an underlying component.
+
+Below are both approaches for your connection parameters. Also, I string format your variables as your concatenation did not properly break quotes within string. You'll notice I double the curly braces since it is needed in connection string and string.format() also uses it.
