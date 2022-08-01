@@ -4,11 +4,11 @@ from datetime import datetime
 import pyodbc
 
 # CONSTANT VARIABLE
-NETWORK_PATH = "C:\\Stuff\\DevOp\\SyncFolder\\root\\B020_DG-0334"
+NETWORK_PATH = r"C:\Stuff\DevOp\SyncFolder\search-new-file\root\B020_DG-0334"
 
 
-FILELIST_SQL = "SELECT * FROM B020DG0334"
-FILE_INSERT_SQL = "INSERT INTO B020DG0334 (FileName, FileSizeInByte, DateRecieved, IsDeleted, SentFrom) VALUES (?, ?, ?, ?, ?)"
+FILELIST_SQL = "SELECT * FROM DataTransmissionLog"
+FILE_INSERT_SQL = "INSERT INTO DataTransmissionLog (Filename, FileSizeInBytes, DataReceived, IsDeleted, SentFrom) VALUES (?, ?, ?, ?, ?)"
 
 
 def CreateConnection():
@@ -40,7 +40,7 @@ def GetFilesListFromDB():
             #     )
             # )
             fileList.append(row.FileName)
-        return fileList, connection
+        return fileList
 
     except pyodbc.Error as err:
         print(err)
@@ -77,22 +77,22 @@ def GetFilesListFromNetwork():
 
 def FindNewFilelist():
     netFilesList = GetFilesListFromNetwork()
-    dbFileList, connection = GetFilesListFromDB()
+    dbFileList = GetFilesListFromDB()
     for i in copy.copy(netFilesList):
         if i[0] in dbFileList:
             netFilesList.remove(i)
 
-    UpdateDBWithNewFile(connection, netFilesList)
+    UpdateDBWithNewFile(netFilesList)
     print("Sync process completed..!")
     # return netFilesList
 
 
-def UpdateDBWithNewFile(connection, params):
-    # connection = CreateConnection()
+def UpdateDBWithNewFile(params):
+    connection = CreateConnection()
     cursor = connection.cursor()
     cursor.fast_executemany = True
-
-    cursor.executemany(FILE_INSERT_SQL, params)
+    print(params)
+    cursor.executemany(FILE_INSERT_SQL, list(params))
     connection.commit()
     cursor.close()
     connection.close()
@@ -100,3 +100,4 @@ def UpdateDBWithNewFile(connection, params):
 
 ###### _Start
 FindNewFilelist()
+# print(GetFilesListFromNetwork())
