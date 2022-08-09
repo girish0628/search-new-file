@@ -4,18 +4,18 @@ from datetime import datetime
 import pyodbc
 
 # CONSTANT VARIABLE
-NETWORK_PATH = r"C:\Stuff\DevOp\SyncFolder\search-new-file\root\B020_DG-0334"
+# NETWORK_PATH = r"C:\Stuff\DevOp\SyncFolder\search-new-file\root\B020_DG-0334"
 
-
+FILE_PATH_LIST_SQL = "SELECT * FROM ProjectShareLookup"
 FILELIST_SQL = "SELECT * FROM DataTransmissionLog"
 FILE_INSERT_SQL = "INSERT INTO DataTransmissionLog (Filename, FileSizeInBytes, DataReceived, IsDeleted, SentFrom) VALUES (?, ?, ?, ?, ?)"
 
 
-def CreateConnection():
+def CreateConnection(dbName):
     return pyodbc.connect(
         "Driver={SQL Server};"
         "Server=DESKTOP-04M1VG7\SQLEXPRESS;"
-        "Database=dev_g;"
+        "Database=" + dbName + ";"
         "Trusted_Connection=yes;"
     )
 
@@ -23,7 +23,7 @@ def CreateConnection():
 def GetFilesListFromDB():
     fileList = []
     try:
-        connection = CreateConnection()
+        connection = CreateConnection("dev_g")
         print("Database connected successfully!")
 
         cursor = connection.cursor()
@@ -51,6 +51,35 @@ def GetFilesListFromDB():
         print("DB connection is closed")
 
 
+def GetNetworkPathFromDB():
+    rootFileList = []
+    try:
+        connection = CreateConnection("SWATDataAnalysis")
+        print("Database connected successfully!")
+
+        cursor = connection.cursor()
+        cursor.execute(FILE_PATH_LIST_SQL)
+
+        for row in cursor:
+            fileShr = row.FileShare.lower()
+            rootFolder = row.FileShare.split("\\")[-1]
+            if row.DriveID == 7:
+                rootFileList.append("j:/SWATTransmissions/{}".format(rootFolder))
+                # rootFileList.append(fileShr.replace(r"\\ustry1metv0496", "j:\\"))
+            if row.DriveID == 5:
+                # rootFileList.append(fileShr.replace(r"\\ustry1metv0496", "g:\\"))
+                rootFileList.append("g:/SWATTransmissions/{}".format(rootFolder))
+        return rootFileList
+
+    except pyodbc.Error as err:
+        print(err)
+        sys.exit(1)
+    finally:
+        cursor.close()
+        connection.close()
+        print("DB connection is closed")
+
+
 def getDateFromPath(fileName, file_path):
     # Get file's Last modification time stamp only in terms of seconds since epoch
     modified = time.strftime(
@@ -67,17 +96,19 @@ def getDateFromPath(fileName, file_path):
 def GetFilesListFromNetwork():
     fileListFromNet = []
     # r=root, d=directories, f = files
-    for r, d, f in walk(NETWORK_PATH):
-        for file in f:
-            file_path = path.join(r, file)
-            # print(f"{file}\t Last Modified: {getDateFromPath(file_path)}")
-            fileListFromNet.append(getDateFromPath(file, file_path))
+    netFilesLists = GetNetworkPathFromDB()
+    for NETWORK_PATH in netFilesLists:
+        for r, d, f in walk(NETWORK_PATH):
+            for file in f:
+                file_path = path.join(r, file)
+                # print(f"{file}\t Last Modified: {getDateFromPath(file_path)}")
+                fileListFromNet.append(getDateFromPath(file, file_path))
     return set(fileListFromNet)
 
 
 def FindNewFilelist():
-    netFilesList = GetFilesListFromNetwork()
     dbFileList = GetFilesListFromDB()
+    netFilesList = GetFilesListFromNetwork()
     for i in copy.copy(netFilesList):
         if i[0] in dbFileList:
             netFilesList.remove(i)
@@ -99,5 +130,5 @@ def UpdateDBWithNewFile(params):
 
 
 ###### _Start
-FindNewFilelist()
+# FindNewFilelist()
 # print(GetFilesListFromNetwork())

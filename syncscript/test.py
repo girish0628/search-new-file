@@ -193,3 +193,7 @@ def UpdateDBWithNewFile(connection, params):
 # print(GetFilesListFromDB())
 # print(GetFilesListFromNetwork())
 # print(list(FindNewFilelist()))
+
+NETWORK_PATH = r"\\USTRY1METV0496\SWATTransmissions2\M100_DG-0303"
+
+print(NETWORK_PATH.split("\\")[-1])
