@@ -64,11 +64,11 @@ def GetNetworkPathFromDB():
             fileShr = row.FileShare.lower()
             rootFolder = row.FileShare.split("\\")[-1]
             if row.DriveID == 7:
-                rootFileList.append("j:/SWATTransmissions/{}".format(rootFolder))
+                rootFileList.append(("j:/SWATTransmissions/{}".format(rootFolder), row.id))
                 # rootFileList.append(fileShr.replace(r"\\ustry1metv0496", "j:\\"))
             if row.DriveID == 5:
                 # rootFileList.append(fileShr.replace(r"\\ustry1metv0496", "g:\\"))
-                rootFileList.append("g:/SWATTransmissions/{}".format(rootFolder))
+                rootFileList.append(("g:/SWATTransmissions/{}".format(rootFolder), row.id))
         return rootFileList
 
     except pyodbc.Error as err:
@@ -97,12 +97,12 @@ def GetFilesListFromNetwork():
     fileListFromNet = []
     # r=root, d=directories, f = files
     netFilesLists = GetNetworkPathFromDB()
-    for NETWORK_PATH in netFilesLists:
+    for NETWORK_PATH, id in netFilesLists:
         for r, d, f in walk(NETWORK_PATH):
             for file in f:
                 file_path = path.join(r, file)
                 # print(f"{file}\t Last Modified: {getDateFromPath(file_path)}")
-                fileListFromNet.append(getDateFromPath(file, file_path))
+                fileListFromNet.append((getDateFromPath(file, file_path), id))
     return set(fileListFromNet)
 
 
@@ -131,4 +131,4 @@ def UpdateDBWithNewFile(params):
 
 ###### _Start
 # FindNewFilelist()
-# print(GetFilesListFromNetwork())
+print(GetFilesListFromNetwork())
